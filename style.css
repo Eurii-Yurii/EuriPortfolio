@@ -1,3 +1,93 @@
-h1 {
-    color: blue;
+@font-face {
+    font-family: 'Hi Melody';
+    src: url(font/HiMelody-Regular.ttf);
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #000;
+}
+
+.layout {
+    position: relative;
+
+    width: min(100vw, calc(100vh * 21 / 9));
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+    background: #fff;
+}
+
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 15%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    background-image: linear-gradient(
+        to bottom,
+        #42113C 35%,
+        #370926 71%,
+        #1C0118
+    );
+
+    color: white;
+}
+
+
+.pfp-container {
+    width: 70%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    margin: 7% auto 0;
+    margin-top: 35%;
+
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+.pfp {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.2) translateX(-5px);
+}
+
+.name {
+    font-family: 'Hi Melody';
+
+    font-size: clamp(20px, 3vw, 48px);
+    text-align: center;
+    margin-top: -2%;
+    color: white;
+}
+
+.name p {
+    margin: 0;
 }
