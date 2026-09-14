@@ -179,3 +179,47 @@ body {
     rgba(246, 170, 28, 82%)
     );
     z-index: 1;
+}
+
+.Buttons {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 3cqw;
+    box-sizing: border-box;
+
+    z-index: 2;
+}
+
+.HCDGDD-button {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 10cqw;
+    height: 15cqw;
+
+    padding: 1cqw;
+    background: #42113C;
+    color: white;
+    border: 0.08cqw solid black;
+    border-radius: 0.7cqw;
+    font-family: 'Hi Melody';
+    font-size: 2cqw;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.HCDGDD-button:hover {
+    background: #70205f;
+    transform: scale(1.05);
+}
+
+
