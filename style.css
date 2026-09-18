@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'Hi Melody';
+    src: url(font/HiMelody-Regular.ttf);
+}
+
+html {
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    background: #000;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.body {
+    width: 100%;
+    min-height: 100%;
+}
+
+.layout {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+.topBar {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 85%;
+    height: 25%;
+    overflow: hidden;
+}
+
+.topBar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.topBar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom, 
+    rgba(0, 0, 0, 82%), 
+    rgba(27, 27, 27, 82%)
+    );
+    border-bottom: 2px solid black;
+
+    z-index: 1;
+}
+
+.topBar-text {
+    font-family: 'Hi Melody';
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    filter:
+        drop-shadow(1px 0 black)
+        drop-shadow(-1px 0 black)
+        drop-shadow(0 1px black)
+        drop-shadow(0 -1px black)
+        drop-shadow(1px 1px black)
+        drop-shadow(-1px -1px black)
+        drop-shadow(1px -1px black)
+        drop-shadow(-1px 1px black);
+    text-align: center;
+
+    margin-top: 1%;
+}
+
+.topBar-text h1 {
+    font-size: 7cqw;
+    margin: 0;
+    line-height: 0.8;
+}
+
+.topBar-text p {
+    font-size: 3cqw;
+    margin: 1cqw 0 0;
+}
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 15%;
+    height: 100vh;
+
+    box-sizing: border-box;
+
+    border-right: 2px solid black;
+
+    background-image: linear-gradient(
+        to bottom,
+        #42113C 35%,
+        #370926 71%,
+        #1C0118
+    );
+
+    color: white;
+
+    z-index: 100;
+}
+
+
+.pfp-container {
+    width: 70%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    margin: 7% auto 0;
+    margin-top: 5%;
+
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+.pfp {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.2) translateX(-5px);
+}
+
+.name {
+    font-family: 'Hi Melody';
+
+    font-size: clamp(20px, 3vw, 48px);
+    text-align: center;
+    margin-top: -2%;
+    color: white;
+}
+
+.name p {
+    margin: 0;
+}
+
+.content {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 85%;
+    height: 75%;
+    overflow: hidden;
+}
+
+.content img{
+    width: 130%;
+    position: absolute;
+    top: -40%;
+    left: -20%;
+}
+
+.content::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to bottom, 
+    rgba(188, 57, 8, 82%) 66%, 
+    rgba(246, 170, 28, 82%)
+    );
+    z-index: 1;
+}
+
+.Buttons {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 3cqw;
+    box-sizing: border-box;
+
+    z-index: 2;
+}
+
+.buttonstuff {
+    width: 18cqw;
+    height: 23cqw;
+
+    padding: 1cqw;
+    margin: 2cqw;
+    background: rgba(0, 0, 0, 63%);
+    color: white;
+    border: 0.08cqw solid black;
+    border-radius: 0.7cqw;
+    font-family: 'Hi Melody';
+    font-size: 3cqw;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonstuff:hover {
+    background: #70205f;
+    transform: scale(1.05);
+}

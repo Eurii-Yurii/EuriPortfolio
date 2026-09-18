@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body class="body">
+
+    <div class="sidebar">
+        <div class="pfp-container">
+            <div class="pfp">
+                <img src="images/pfp.jpg" class="pfp">
+            </div>
+        </div>
+        <div class="name">
+            <p>EuriiYurii</p>
+        </div>
+    </div>
+
+    <section class="slide">
+        <div class="layout">
+
+            <div class="topBar">
+                <img src="images/gameIMG.png">
+
+                <div class="topBar-text">
+                    <h1>I MAKE GAMES</h1>
+                    <p>and stuff</p>
+                </div>
+
+            </div>
+
+            <div class="content">
+                <img src="images/contentIMG.png">
+
+                <div class="Buttons">
+
+                    <div class="buttonstuff">
+                        <h5>PROTOTYPES</h5>
+                    </div>
+
+                    <div class="buttonstuff">
+                        <h5>VIDEO GAME PROJECTS</h5>
+                    </div>
+
+                    <div class="buttonstuff">
+                        <h5>HCD's/GDD's</h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="layout">
+
+            <div class="topBar">
+                <img src="images/gameIMG.png">
+
+                <div class="topBar-text">
+                    <h1>I DO ART</h1>
+                    <p>and stuff</p>
+                </div>
+
+            </div>
+
+            <div class="content">
+                <img src="images/contentIMG.png">
+
+                <div class="Buttons">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="layout">
+
+            <div class="topBar">
+                <img src="images/gameIMG.png">
+
+                <div class="topBar-text">
+                    <h1 style="font-size: 5cqw;">I DO PROGRAMMING</h1>
+                    <p>and stuff</p>
+                </div>
+
+            </div>
+
+            <div class="content">
+                <img src="images/contentIMG.png">
+
+                <div class="Buttons">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="layout">
+
+            <div class="topBar">
+
+                <div class="topBar-text">
+                    <h1>I DO OTHER STUFF</h1>
+                </div>
+
+            </div>
+
+            <div class="content">
+                <div class="Buttons">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+
+        let currentSlide = 0;
+        let scrolling = false;
+
+        window.addEventListener('wheel', (event) => {
+        event.preventDefault();
+
+        if (scrolling) return;
+
+        scrolling = true;
+
+        if (event.deltaY > 0) {
+        currentSlide++;
+        } else {
+        currentSlide--;
+        }
+
+        currentSlide = Math.max(
+        0,
+        Math.min(currentSlide, slides.length - 1)
+        );
+
+        slides[currentSlide].scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+        });
+
+        setTimeout(() => {
+        scrolling = false;
+        }, 700);
+        }, { passive: false });
+    </script>
+</body>
+</html>
