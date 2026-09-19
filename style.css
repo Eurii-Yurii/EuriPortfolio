@@ -189,7 +189,7 @@ body {
     overflow: hidden;
 }
 
-.content img{
+.content > img{
     width: 130%;
     position: absolute;
     top: -40%;
@@ -225,27 +225,137 @@ body {
 }
 
 .buttonstuff {
+    position: relative;
+    overflow: hidden;
+
     width: 18cqw;
     height: 23cqw;
 
-    padding: 1cqw;
+    padding: 0;
     margin: 2cqw;
-    background: rgba(0, 0, 0, 63%);
-    color: white;
+
     border: 0.08cqw solid black;
     border-radius: 0.7cqw;
-    font-family: 'Hi Melody';
-    font-size: 3cqw;
-    text-align: center;
+
     cursor: pointer;
     transition: 0.2s ease;
-    display: flex;
+}
 
+.VGameProjects-text {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
     justify-content: center;
     align-items: center;
+
+    font-family: 'Hi Melody';
+    font-size: 3.5cqw;
+    text-align: center;
+
+    color: white;
+    z-index: 2;
+}
+
+.VGameProjects-text h5 {
+    margin: 0;
 }
 
 .buttonstuff:hover {
-    background: #70205f;
     transform: scale(1.05);
+}
+
+.VGameProjects {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.VGameProjects img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.6) translateX(7%) translateY(-8%);
+}
+
+.VGameProjects::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.HCDgdd {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.HCDgdd img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.8) translateX(7%) translateY(-7%);
+}
+
+.HCDgdd::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+.HCDgdd-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hi Melody';
+    font-size: 3.5cqw;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.HCDgdd-text h5 {
+    margin: 0;
+}
+
+.prototype {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.prototype img {
+    width: 100%;
+    height: 100%;
+    transform: scale(2) translateX(7%) translateY(20%);
+}
+
+.prototype::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+.prototype-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hi Melody';
+    font-size: 3.5cqw;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.prototype-text h5 {
+    margin: 0;
 }
