@@ -359,3 +359,186 @@ body {
 .prototype-text h5 {
     margin: 0;
 }
+
+.Buttons-art {
+    position: absolute;
+    top: -5%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1cqw;
+    padding-top: 3cqw;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.art-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3cqw;
+}
+
+.buttonstuff-art {
+    position: relative;
+    overflow: hidden;
+
+    width: 12cqw;
+    height: 17cqw;
+
+    margin: 0;
+
+    border: 0.08cqw solid black;
+    border-radius: 0.7cqw;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.buttonstuff-art:hover {
+    transform: scale(1.05);
+}
+
+.illustrations img {
+    width: 100%;
+    height: 100%;
+    transform: scale(2.5) translateX(7%) translateY(15%);
+}
+
+.illustrations::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.illustrations-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hi Melody';
+    font-size: 3.5cqw;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.sketch img {
+    width: 100%;
+    height: 100%;
+    transform: scale(2.5) translateX(-2%) translateY(15%);
+}
+
+.sketch::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.sketch-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hi Melody';
+    font-size: 3.5cqw;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.assets img {
+    width: 100%;
+    height: 100%;
+    transform: scale(2.5) translateX(-15%) translateY(15%);
+}
+
+.assets::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.assets-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hi Melody';
+    font-size: 3.5cqw;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.concept img {
+    width: 100%;
+    height: 100%;
+    transform: scale(2.5) translateX(-15%) translateY(15%);
+}
+
+.concept::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.concept-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hi Melody';
+    font-size: 3.5cqw;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.models img {
+    width: 100%;
+    height: 100%;
+    transform: scale(2.8) translateX(0%) translateY(25%);
+}
+
+.models::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.models-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hi Melody';
+    font-size: 3.5cqw;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
