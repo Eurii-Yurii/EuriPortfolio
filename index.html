@@ -17,6 +17,20 @@
         <div class="name">
             <p>EuriiYurii</p>
         </div>
+
+        <div class="aboutMe">
+            <p>
+                I'm Euri and I'm a game developer. <br>
+                I make games, do art, and some programming on the side <br>
+            </p>
+        </div>
+
+        <div class="currentPage">
+            <h2 class="page-link active">Games</h2>
+            <h2 class="page-link">Art</h2>
+            <h2 class="page-link">Programming</h2>
+            <h2 class="page-link">Others</h2>
+        </div>
     </div>
 
     <section class="slide">
@@ -214,11 +228,19 @@
 
     <script>
         const slides = document.querySelectorAll('.slide');
+    const pageLinks = document.querySelectorAll('.page-link');
 
-        let currentSlide = 0;
-        let scrolling = false;
+    let currentSlide = 0;
+    let scrolling = false;
 
-        window.addEventListener('wheel', (event) => {
+    function updateSidebar() {
+        pageLinks.forEach((link, index) => {
+            link.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    // Mouse wheel navigation
+    window.addEventListener('wheel', (event) => {
         event.preventDefault();
 
         if (scrolling) return;
@@ -226,25 +248,46 @@
         scrolling = true;
 
         if (event.deltaY > 0) {
-        currentSlide++;
+            currentSlide++;
         } else {
-        currentSlide--;
+            currentSlide--;
         }
 
         currentSlide = Math.max(
-        0,
-        Math.min(currentSlide, slides.length - 1)
+            0,
+            Math.min(currentSlide, slides.length - 1)
         );
 
         slides[currentSlide].scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+            behavior: 'smooth',
+            block: 'start'
         });
 
+        updateSidebar();
+
         setTimeout(() => {
-        scrolling = false;
+            scrolling = false;
         }, 700);
-        }, { passive: false });
+    }, { passive: false });
+
+
+    // Sidebar navigation
+    pageLinks.forEach((link, index) => {
+        link.addEventListener('click', () => {
+
+            currentSlide = index;
+
+            slides[currentSlide].scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+            updateSidebar();
+        });
+    });
+
+
+    updateSidebar();
     </script>
 </body>
 </html>
